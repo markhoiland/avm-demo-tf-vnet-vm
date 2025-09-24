@@ -1,0 +1,31 @@
+# Example configuration file for the AVM demo
+# Copy this file to terraform.tfvars and modify as needed
+
+# Basic configuration
+location            = "East US"
+resource_group_name = "rg-avm-demo"
+vnet_name          = "vnet-avm-demo"
+
+# Network configuration
+vnet_address_space      = ["10.0.0.0/16"]
+subnet_address_prefixes = ["10.0.1.0/24"]
+
+# Virtual machine configuration
+vm_name  = "vm-avm-demo"
+vm_size  = "Standard_B2s"
+
+# Authentication (choose one method)
+# Option 1: Username and password
+admin_username = "azureuser"
+# admin_password = "YourSecurePassword123!"
+
+# Option 2: SSH key authentication (recommended)
+# disable_password_authentication = true
+# public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAA... your-public-key-here"
+
+# Tags
+tags = {
+  Environment = "demo"
+  Project     = "avm-demo"
+  Owner       = "your-name"
+}
