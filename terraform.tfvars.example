@@ -1,0 +1,17 @@
+location = "Central US"
+name_prefix = "tfdemo"
+virtual_machines_count = {
+  vm1 = {
+    name = "appvm1"
+    size  = "Standard_B1s"
+    image = "UbuntuLTS"
+    zone  = "1"
+  }
+  vm2 = {
+    name = "appvm2"
+    size  = "Standard_B1s"
+    image = "UbuntuLTS"
+    zone  = "2"
+  }
+}
+deploy_bastion = false
